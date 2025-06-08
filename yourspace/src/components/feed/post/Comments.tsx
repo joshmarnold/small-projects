@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useAppStore } from "@/store/useAppStore";
-import { Message } from "@/types";
+import { useAppStore } from "@/store/";
 import { useState } from "react";
+import { Message } from "@/types/message";
 
 interface CommentsProps {
   comments: Message[];

@@ -4,9 +4,9 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { PhotoIcon } from "@heroicons/react/24/outline";
-import { User } from "@/types";
 import { childMotionProps } from "@/constants/motion";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
+import { User } from "@/types/user";
 
 interface CreatePostProps {
   currentUser: User;

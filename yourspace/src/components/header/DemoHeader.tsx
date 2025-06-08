@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import clsx from "clsx";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 

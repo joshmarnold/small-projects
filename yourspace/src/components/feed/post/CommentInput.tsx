@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 
 interface CommentInputProps {
   postId: string;

@@ -1,13 +1,13 @@
 "use client";
 
-import { Group } from "@/types";
 import { UsersIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { useState, useRef } from "react";
 import clsx from "clsx";
 import { childMotionProps, parentMotionProps } from "@/constants/motion";
 import { motion } from "framer-motion";
+import { Group } from "@/types/group";
 
 export const Chat = ({ group }: { group: Group | null }) => {
   const currentUserId = useAppStore((s) => s.currentUserId);

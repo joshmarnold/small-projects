@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import {
   HeartIcon,
   ChatBubbleBottomCenterTextIcon,

@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { UserCardGroup } from "./UserCardGroup";
 import { UserRow } from "./UserRow";
 import { motion } from "framer-motion";

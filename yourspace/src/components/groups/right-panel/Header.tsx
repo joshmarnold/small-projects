@@ -1,6 +1,5 @@
 "use client";
 
-import { Group } from "@/types";
 import Image from "next/image";
 import {
   Cog6ToothIcon,
@@ -9,7 +8,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
+import { Group } from "@/types/group";
 
 type RightPanelProps = {
   group: Group | null;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { Header } from "@/components/header/Header";
 import { Feed } from "@/components/feed/Feed";
 import { Groups } from "@/components/groups/Groups";

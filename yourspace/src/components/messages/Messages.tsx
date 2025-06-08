@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import Image from "next/image";
 import clsx from "clsx";
 import { childMotionProps, parentMotionProps } from "@/constants/motion";
 import { motion } from "framer-motion";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
-import { DMThread } from "@/types";
+import { DMThread } from "@/types/dm";
 
 export const Messages = () => {
   const currentUserId = useAppStore((s) => s.currentUserId);

@@ -1,7 +1,8 @@
 "use client";
 
+import { Post } from "@/types/post";
+import { User } from "@/types/user";
 import Image from "next/image";
-import { User, Post } from "@/types";
 
 interface HeaderProps {
   author: User;

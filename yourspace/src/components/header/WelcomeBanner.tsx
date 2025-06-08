@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { InformationCircleIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export const WelcomeBanner = () => {

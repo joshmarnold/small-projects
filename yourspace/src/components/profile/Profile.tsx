@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { childWithoutParentMotionProps } from "@/constants/motion";

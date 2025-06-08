@@ -1,6 +1,6 @@
 "use client";
 
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import clsx from "clsx";

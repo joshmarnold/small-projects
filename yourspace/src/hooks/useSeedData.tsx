@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { seedData } from "@/utils/seed";
 
 export const useSeedData = () => {

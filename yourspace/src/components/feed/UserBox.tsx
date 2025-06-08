@@ -2,17 +2,19 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { User } from "@/types";
 import { childMotionProps } from "@/constants/motion";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
+import { User } from "@/types/user";
+import { FC } from "react";
 
 interface UserBoxProps {
   user: User;
 }
 
-export const UserBox = ({ user }: UserBoxProps) => {
+export const UserBox: FC<UserBoxProps> = ({ user }: UserBoxProps) => {
   const posts = useAppStore((s) => s.posts);
   const usersPosts = posts.filter((post) => post.userId === user?.id);
+  const setActiveTab = useAppStore((s) => s.setActiveTab);
 
   return (
     <motion.aside
@@ -61,7 +63,10 @@ export const UserBox = ({ user }: UserBoxProps) => {
           </div>
         </div>
 
-        <button className="mt-4 w-full cursor-pointer rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition duration-150 hover:bg-slate-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none">
+        <button
+          className="mt-4 w-full cursor-pointer rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition duration-150 hover:bg-slate-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 focus:outline-none"
+          onClick={() => setActiveTab("profile")}
+        >
           View Profile
         </button>
       </div>

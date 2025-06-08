@@ -1,6 +1,5 @@
 "use client";
 
-import { Group } from "@/types";
 import { UsersIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { Chat } from "./Chat";
@@ -8,6 +7,7 @@ import { Settings } from "./Settings";
 import { useEffect, useState } from "react";
 import { Header } from "./Header";
 import { childMotionProps } from "@/constants/motion";
+import { Group } from "@/types/group";
 
 export const RightPanel = ({ group }: { group: Group | null }) => {
   const [showSettings, setShowSettings] = useState(false);

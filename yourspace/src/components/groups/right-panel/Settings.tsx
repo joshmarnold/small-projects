@@ -1,11 +1,11 @@
 "use client";
 
-import { Group } from "@/types";
 import Image from "next/image";
 import { TrashIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { useState } from "react";
+import { Group } from "@/types/group";
 
 export const Settings = ({ group }: { group: Group }) => {
   const users = useAppStore((s) => s.users);

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import { Post } from "./post/Post";
 import { UserBox } from "./UserBox";
 import { CreatePost } from "./CreatePost";

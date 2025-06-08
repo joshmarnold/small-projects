@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Post as PostType } from "@/types/index";
-import { useAppStore } from "@/store/useAppStore";
+import { useAppStore } from "@/store/";
 import Image from "next/image";
 import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
 import { childMotionProps } from "@/constants/motion";
@@ -11,6 +10,7 @@ import { Comments } from "./Comments";
 import { CommentInput } from "./CommentInput";
 import { Actions } from "./Actions";
 import { useRef } from "react";
+import { Post as PostType } from "@/types/post";
 
 interface PostProps {
   post: PostType;
