@@ -58,7 +58,7 @@ export const Header = () => {
         <nav
           className={`${
             menuOpen ? "translate-x-0" : "translate-x-full"
-          } fixed inset-0 z-50 flex flex-col items-center justify-center gap-8 bg-blue-900/95 p-10 text-white transition-transform duration-300 md:static md:inset-auto md:flex md:translate-x-0 md:flex-row md:gap-6 md:bg-transparent md:p-0 md:text-blue-900`}
+          } fixed top-0 left-0 z-50 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-blue-900/95 p-10 text-white transition-transform duration-300 md:static md:inset-auto md:flex md:translate-x-0 md:flex-row md:gap-6 md:bg-transparent md:p-0 md:text-blue-900`}
         >
           {/* Close button (mobile only) */}
           <button
@@ -83,6 +83,7 @@ export const Header = () => {
               className="relative"
             >
               <a
+                onClick={() => setMenuOpen(false)}
                 href={href}
                 className="text-lg font-medium transition-colors hover:text-orange-500 md:text-base"
               >
