@@ -35,7 +35,8 @@ export const Contact = () => {
             fill="none"
             initial={{ strokeDasharray: 1600, strokeDashoffset: 1600 }}
             whileInView={{ strokeDashoffset: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}
           />
         </svg>
       </div>
@@ -48,6 +49,7 @@ export const Contact = () => {
             initial="hidden"
             whileInView="visible"
             variants={fadeSlideLeft}
+            viewport={{ once: true }}
           >
             <div className="inline-block rounded-full bg-white/10 px-4 py-1.5">
               <span className="text-sm font-medium">Get in touch</span>
@@ -69,6 +71,7 @@ export const Contact = () => {
                   initial={{ strokeDasharray: 300, strokeDashoffset: 300 }}
                   whileInView={{ strokeDashoffset: 0 }}
                   transition={{ duration: 1, delay: 1 }}
+                  viewport={{ once: true }}
                 />
               </svg>
             </div>
@@ -99,61 +102,76 @@ export const Contact = () => {
             initial="hidden"
             whileInView="visible"
             variants={fadeSlideRight}
-            className="relative rounded-2xl bg-white/5 p-6 backdrop-blur-sm md:p-8"
+            viewport={{ once: true }}
+            className="relative"
           >
-            <div className="pointer-events-none absolute -top-10 -right-10 -bottom-10 -left-10 opacity-10">
+            {/* Background circle behind form */}
+            <div className="pointer-events-none absolute inset-0 -top-10 z-1 opacity-20">
               <svg width="600" height="600" viewBox="0 0 600 600">
-                <circle
+                <motion.circle
                   cx="300"
                   cy="300"
                   r="299"
                   stroke="#FC5130"
                   strokeWidth="1"
                   fill="none"
+                  initial={{ r: 0 }}
+                  animate={{ r: 299 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 50,
+                    delay: 0.5,
+                  }}
+                  viewport={{ once: true }}
                 />
               </svg>
             </div>
-            <form className="relative z-10 space-y-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full rounded-lg bg-white/10 p-3 text-white placeholder-white/50 focus:ring-2 focus:ring-sky-400 focus:outline-none"
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full rounded-lg bg-white/10 p-3 text-white placeholder-white/50 focus:ring-2 focus:ring-sky-400 focus:outline-none"
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  placeholder="Your message"
-                  className="w-full rounded-lg bg-white/10 p-3 text-white placeholder-white/50 focus:ring-2 focus:ring-sky-400 focus:outline-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-md bg-orange-500 px-4 py-2 font-medium text-white hover:bg-orange-500/90 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none"
-              >
-                Send Message
-              </button>
-            </form>
+
+            {/* Actual form container */}
+            <div className="relative z-10 rounded-2xl bg-white/5 p-6 backdrop-blur-sm md:p-8">
+              <form className="space-y-6">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                    className="w-full rounded-lg bg-white/10 p-3 text-white placeholder-white/50 focus:ring-2 focus:ring-sky-400 focus:outline-none"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-medium">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Your email"
+                    className="w-full rounded-lg bg-white/10 p-3 text-white placeholder-white/50 focus:ring-2 focus:ring-sky-400 focus:outline-none"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    placeholder="Your message"
+                    className="w-full rounded-lg bg-white/10 p-3 text-white placeholder-white/50 focus:ring-2 focus:ring-sky-400 focus:outline-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full rounded-md bg-orange-500 px-4 py-2 font-medium text-white hover:bg-orange-500/90 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
           </motion.div>
         </div>
       </div>

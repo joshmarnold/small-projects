@@ -37,6 +37,7 @@ export const Footer = () => {
             initial={{ strokeDasharray: 1600, strokeDashoffset: 1600 }}
             whileInView={{ strokeDashoffset: 0 }}
             transition={{ duration: 1, delay: 1 }}
+            viewport={{ once: true }}
           />
         </svg>
       </div>

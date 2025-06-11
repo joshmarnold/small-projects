@@ -223,20 +223,8 @@ export const Work = () => {
           className="mt-12 text-center"
           initial="hidden"
           whileInView="visible"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: {
-                y: {
-                  duration: 0.5,
-                  delay: 1.8,
-                  ease: "easeOut",
-                },
-              },
-            },
-          }}
+          viewport={{ once: true }}
+          variants={fadeUp}
         >
           <button className="inline-flex items-center justify-center rounded-md border border-sky-400 px-8 py-3 text-sm font-medium text-sky-400 transition-colors hover:bg-sky-400/10 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:outline-none">
             View All Projects

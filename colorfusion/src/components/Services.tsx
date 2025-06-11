@@ -37,6 +37,7 @@ export const Services = () => {
             fill="none"
             initial={{ pathLength: 0 }}
             whileInView={{ pathLength: 1 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.8,
               ease: "easeInOut",
@@ -143,6 +144,7 @@ export const Services = () => {
             initial={{ strokeDasharray: 1600, strokeDashoffset: 1600 }}
             whileInView={{ strokeDashoffset: 0 }}
             transition={{ duration: 1.5, delay: 1.2 }}
+            viewport={{ once: true }}
           />
         </svg>
       </div>
