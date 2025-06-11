@@ -104,7 +104,7 @@ export const Header = () => {
               duration: 0.8,
               ease: "easeOut",
             }}
-            className="hidden h-10 min-w-[120px] rounded-md bg-orange-500 px-4 py-2 font-medium text-white transition-colors hover:bg-orange-500/90 md:flex"
+            className="hidden h-10 min-w-[120px] rounded-md bg-orange-500 px-4 py-2 font-medium text-white transition-colors hover:bg-orange-500/90 md:flex text-nowrap"
           >
             Get Started
           </motion.button>
