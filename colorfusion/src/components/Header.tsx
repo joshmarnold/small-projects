@@ -57,7 +57,9 @@ export const Header = () => {
         {/* Nav */}
         <nav
           className={`${
-            menuOpen ? "translate-x-0" : "translate-x-full"
+            menuOpen
+              ? "pointer-events-auto translate-x-0"
+              : "pointer-events-none translate-x-full"
           } fixed top-0 left-0 z-50 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-blue-900/95 p-10 text-white transition-transform duration-300 md:static md:inset-auto md:flex md:translate-x-0 md:flex-row md:gap-6 md:bg-transparent md:p-0 md:text-blue-900`}
         >
           {/* Close button (mobile only) */}
@@ -104,7 +106,7 @@ export const Header = () => {
               duration: 0.8,
               ease: "easeOut",
             }}
-            className="hidden h-10 min-w-[120px] rounded-md bg-orange-500 px-4 py-2 font-medium text-white transition-colors hover:bg-orange-500/90 md:flex text-nowrap"
+            className="hidden h-10 min-w-[120px] rounded-md bg-orange-500 px-4 py-2 font-medium text-nowrap text-white transition-colors hover:bg-orange-500/90 md:flex"
           >
             Get Started
           </motion.button>
